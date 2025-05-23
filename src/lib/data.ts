@@ -35,17 +35,6 @@ export const workExperience = [
       "Collaborated with cross-functional teams to align platform capabilities with business requirements, enhancing reporting automation and reducing manual query writing.",
     ],
   },
-
-  {
-    company: "Phoenitags",
-    location: "Coimbatore, India",
-    position: "Software Engineering Intern",
-    period: "Jan 2023 - Mar 2023",
-    achievements: [
-      "Built interactive UIs with React.js, focusing on reusable components and performance optimization.",
-      "Implemented JavaScript-based features like user authentication and real-time updates.",
-    ],
-  },
 ];
 
 export const education = [
