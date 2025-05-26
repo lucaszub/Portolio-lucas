@@ -116,14 +116,15 @@ export const projects = [
   },
 
   {
-    title: "Mental Aarog",
-    github: "https://github.com/rishikesh2003/mental-aarog",
+    title: "Natural Language SQL Assistant",
+    github: "https://github.com/lucaszub/",
     description: [
-      "A holistic mental health app leveraging AI and blockchain for early detection and personalized solutions for depression.",
-      "Features include social media analysis (ML-based sentiment tracking), PHQ-9 assessments, smartwatch integration for sleep and activity data, guided meditation, and smart suggestions for food, travel, music, and movies.",
-      "Developed a rewards system using MAG crypto token on Ethereum, enabling user engagement through in-app incentives.",
-      "Secure storage implemented via web3.storage, IPFS, and FileCoin.",
-      "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
+      "An AI-powered assistant that translates natural language questions into SQL queries using LangChain and OpenAI models.",
+      "Connects to relational databases (SQL Server in MVP), detects schema and relationships automatically, and returns query results in real time.",
+      "Supports exporting query results in CSV or JSON to Azure Blob Storage.",
+      "Built with Python, LangChain, SQLAlchemy, and FastAPI for the backend; Streamlit for the UI.",
+      "Deployment on Azure using Azure Container Registry (ACR), Web App for Containers.",
+      "MVP focused on SQL Server, with plans to expand to BigQuery, Snowflake, and other DBMS in future versions.",
     ],
   },
 ];
