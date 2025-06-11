@@ -82,49 +82,57 @@ export const education = [
 ];
 export const skills = {
   programmingLanguages: ["Python", "SQL", "DAX"],
-  backendDevelopment: ["FastAPI"],
+  dataEngineering: [
+    "Azure Data Factory",
+    "Azure Databricks",
+    "dbt",
+    "Alteryx",
+    "Azure Synapse Analytics",
+  ],
+  cloudAndDevOps: [
+    "Azure",
+    "Azure Container Registry",
+    "Azure Web App",
+    "GitHub Actions",
+    "Docker",
+  ],
   databaseAndStorage: [
     "Snowflake",
     "Azure SQL Database",
-    "SQL Server",
     "Oracle",
+    "Azure Data Lake Gen2",
     "Azure Blob Storage",
   ],
-  cloudAndDevOps: ["Azure", "GitHub Actions", "Docker"],
-  dataEngineeringAndAnalytics: [
-    "dbt",
-    "Power BI",
-    "Alteryx",
-    "Make (ex-Integromat)",
-  ],
-  frontendDevelopment: ["React.js", "Streamlit", "Tailwind CSS", "HTML", "CSS"],
-
-  toolsAndServices: ["LangChain", "SQLAlchemy", "VS Code", "Git"],
+  businessIntelligence: ["Power BI"],
 };
 
 export const projects = [
   {
-    title: "Nantes Mobility - Urban Bike Data Platform",
-    github: "https://github.com/lucaszub/nantes-mobility-dbt",
+    title: "Tokyo Olympics Analytics - Azure Data Engineering Pipeline",
+    github:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7338555290172223489/",
     description: [
-      "Automated data ingestion using Python and GitHub Actions for live Bicloo station data.",
-      "Data storage and transformation with Snowflake and dbt for scalable and maintainable pipelines.",
-      "Power BI dashboards for visualization of key urban mobility KPIs and trends.",
-      "Focus on cost-efficiency by optimizing data storage and pipeline orchestration.",
-      "Designed to provide actionable insights for urban planners and mobility analysts.",
+      "End-to-end data pipeline built on Azure for learning and DP-900 certification.",
+      "Data ingestion orchestrated with Azure Data Factory, pulling Olympic datasets from GitHub.",
+      "Centralized, low-cost storage of raw and processed data using Azure Data Lake Gen2.",
+      "Data transformation at scale with Azure Databricks (Spark), enabling advanced cleaning and enrichment.",
+      "Analytical modeling and ELT processing using Azure Synapse Analytics for flexible, high-performance querying.",
+      "Interactive dashboards and business insights delivered via Power BI, connected directly to Synapse.",
+      "Project demonstrates the modularity and synergy of Azure services for modern, scalable analytics architectures.",
+      "Key learning: for simple ELT, Data Lake + Synapse is cost-efficient; Databricks is leveraged for big data and complex transformations.",
     ],
   },
-
   {
-    title: "Natural Language SQL Assistant",
-    github: "https://github.com/lucaszub/",
+    title: "Azure Docker Deployment Guide - FastAPI CI/CD Pipeline",
+    github: "https://github.com/lucaszub/azure-docker-deployment-guide",
     description: [
-      "An AI-powered assistant that translates natural language questions into SQL queries using LangChain and OpenAI models.",
-      "Connects to relational databases (SQL Server in MVP), detects schema and relationships automatically, and returns query results in real time.",
-      "Supports exporting query results in CSV or JSON to Azure Blob Storage.",
-      "Built with Python, LangChain, SQLAlchemy, and FastAPI for the backend; Streamlit for the UI.",
-      "Deployment on Azure using Azure Container Registry (ACR), Web App for Containers.",
-      "MVP focused on SQL Server, with plans to expand to BigQuery, Snowflake, and other DBMS in future versions.",
+      "Déploiement automatisé d'une application FastAPI sur Azure à l’aide de Docker, Azure CLI et GitHub Actions.",
+      "Utilisation d’Azure Container Registry (ACR) pour stocker et gérer les images Docker de façon sécurisée et scalable.",
+      "Déploiement continu sur Azure Web App, garantissant disponibilité et montée en charge de l'application.",
+      "Pipeline CI/CD complet avec GitHub Actions : build, push de l’image Docker vers ACR, puis déploiement automatique sur Azure.",
+      "Configuration des secrets et authentification sécurisée entre GitHub et Azure pour des déploiements sans intervention manuelle.",
+      "Guide étape par étape pour la création des ressources Azure, la configuration des workflows et la gestion du cycle de vie applicatif.",
+      "Projet idéal pour comprendre l’intégration DevOps sur Azure et l’automatisation du déploiement d’applications conteneurisées.",
     ],
   },
 ];
