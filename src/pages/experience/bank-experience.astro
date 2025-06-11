@@ -1,0 +1,109 @@
+---
+// src/pages/blog/experience-silamir.astro
+import Layout from "@/layouts/Layout.astro";
+import GlassHeader from "@/components/GlassHeader";
+import Footer from "@/components/Footer";
+import TableOfContents from "@/components/TableOfContents.astro";
+import BlogStructure from "@/components/BlogStructure";
+
+const post = {
+  title: "Détail d'expérience – Silamir",
+  publishDate: "2021-2022",
+  readTime: "3 min de lecture",
+  tags: ["Alteryx", "Oracle", "Power BI", "Banque", "Data"],
+  headings: [
+    { depth: 2, slug: "contexte", text: "Contexte" },
+    { depth: 2, slug: "objectifs", text: "Objectifs" },
+    { depth: 2, slug: "missions-principales", text: "Missions principales" },
+    { depth: 2, slug: "outils-et-technologies", text: "Outils et technologies" },
+    { depth: 2, slug: "enseignements-tires", text: "Enseignements tirés" },
+    { depth: 2, slug: "conclusion", text: "Conclusion" },
+  ]
+};
+---
+
+<Layout title={post.title}>
+  <GlassHeader client:only="react" />
+
+  <div class="flex justify-center">
+    <div class="max-w-screen-xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-x-8">
+        
+        <main class="lg:col-span-8 lg:col-start-3 mx-auto rounded-lg px-4 sm:px-8 lg:px-12 text-gray-800">
+          <article>
+            <header class="mb-8 border-b pb-4">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                {post.title}
+              </h1>
+              <p class="text-base text-gray-500 mb-4">
+                Période : {post.publishDate} • {post.readTime}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {post.tags.map(tag => (
+                  <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </header>
+
+            <div class="prose prose-lg max-w-none dark:prose-invert">
+                
+              <BlogStructure client:only="react" />
+
+
+              <section id="contexte" class="scroll-mt-20">
+                <h2>Contexte</h2>
+                <p>Lors de cette mission, j’ai été intégré au sein d’un grand groupe bancaire via Silamir, sur des problématiques de traitement de données opérationnelles. L’équipe fonctionnait en flux tendu avec un grand volume de fichiers CSV à traiter quotidiennement pour alimenter un système décisionnel.</p>
+              </section>
+
+              <section id="objectifs" class="scroll-mt-20">
+                <h2>Objectifs</h2>
+                <p>L’objectif principal était de fiabiliser et d’automatiser l’ingestion des données issues de fichiers plats dans des tables Oracle, tout en assurant le suivi des workflows. Le reporting associé était crucial pour le pilotage des opérations métier.</p>
+              </section>
+
+              <section id="missions-principales" class="scroll-mt-20">
+                <h2>Missions principales</h2>
+                <ul>
+                  <li>Automatisation de workflows de transformation et de chargement via Alteryx.</li>
+                  <li>Création de tableaux de bord Power BI pour suivre l’état d’avancement et détecter rapidement les anomalies.</li>
+                  <li>Gestion d’une trentaine de workflows par semaine, en coordination avec les équipes métiers.</li>
+                </ul>
+              </section>
+
+              <section id="outils-et-technologies" class="scroll-mt-20">
+                <h2>Outils et technologies</h2>
+                <p>Les technologies utilisées comprenaient :</p>
+                <ul>
+                  <li><strong>Alteryx :</strong> pour les traitements ETL (nettoyage, mapping, validation).</li>
+                  <li><strong>Oracle :</strong> base de données cible pour le stockage des données nettoyées.</li>
+                  <li><strong>Power BI :</strong> pour construire des indicateurs de suivi des workflows et signaler les erreurs ou incohérences.</li>
+                </ul>
+              </section>
+
+              <section id="enseignements-tires" class="scroll-mt-20">
+                <h2>Enseignements tirés</h2>
+                <p>Cette expérience m’a permis de mieux comprendre les contraintes liées à l’industrialisation des flux de données dans un contexte bancaire, d’acquérir des réflexes pour fiabiliser les pipelines, et de valoriser l’importance du monitoring des traitements.</p>
+              </section>
+
+              <section id="conclusion" class="scroll-mt-20">
+                <h2>Conclusion</h2>
+                <p>Mon passage chez Silamir m’a permis de mettre un pied dans le monde de la data opérationnelle à grande échelle. J’ai consolidé ma pratique des outils no-code comme Alteryx, tout en approfondissant mes connaissances en bases de données et en reporting métier.</p>
+              </section>
+
+            </div>
+          </article>
+        </main>
+
+        <aside class="hidden lg:block lg:col-span-4 lg:sticky lg:top-24 self-start">
+          <div class="max-h-[calc(100vh-7rem)] overflow-y-auto p-1">
+            <TableOfContents headings={post.headings} />
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <Footer client:only="react" />
+</Layout>

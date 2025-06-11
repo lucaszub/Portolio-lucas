@@ -19,6 +19,7 @@ export const workExperience = [
       "Collaborated with cross-functional teams to align data solutions with business needs, ensuring compliance and data governance.",
       "Supported troubleshooting and enhancement of existing workflows to adapt to evolving requirements and improve scalability.",
     ],
+    detailPage: "https://www.silamir.com/",
   },
 
   {
@@ -34,6 +35,7 @@ export const workExperience = [
       "Deployed and hosted the entire solution on Azure, utilizing Azure Web Apps and Azure Functions to ensure scalability, security, and seamless cloud integration.",
       "Collaborated with cross-functional teams to align platform capabilities with business requirements, enhancing reporting automation and reducing manual query writing.",
     ],
+    detailPage: "https://www.silamir.com",
   },
 ];
 
@@ -178,5 +180,46 @@ export const awards = [
     date: "Feb 2022",
     type: "National",
     position: "Most Impactful Hack",
+  },
+];
+
+export const detailedExperiences = [
+  {
+    slug: "bank-experience",
+    title: "Détail de l'expérience – Silamir",
+    cover: "/images/banque.jpg",
+    sections: [
+      {
+        heading: "Contexte & Problématique",
+        content: `Mission en régie dans une grande banque française via Silamir, en tant que Data Engineer spécialisé dans l'automatisation de workflows et la BI. Le client devait assurer la fiabilité et la traçabilité de dizaines de traitements de données critiques, réalisés quotidiennement dans un environnement Oracle, tout en améliorant la visibilité pour les équipes métier.`,
+      },
+      {
+        heading: "Objectifs",
+        content: `
+- Industrialiser la création et le suivi des workflows de traitement de données
+- Assurer un monitoring centralisé et efficace
+- Réduire les erreurs humaines dans les chaînes de traitement
+- Améliorer la réactivité des équipes grâce à des visualisations claires
+        `,
+      },
+      {
+        heading: "Solutions & Réalisations",
+        content: `
+- **Développement de 30+ workflows Alteryx** pour charger, nettoyer et transformer des fichiers CSV vers des bases Oracle, en tenant compte de la qualité et des contrôles métiers.
+- **Mise en place de dashboards Power BI** pour monitorer en temps réel l’état des workflows (succès/échecs, durées, volumes), facilitant la supervision des flux par les équipes internes.
+- **Optimisation des performances** des pipelines : refactorisation de workflows lents, meilleure gestion des exceptions, documentation des cas limites.
+- **Collaboration étroite** avec des Product Owners, ingénieurs métier et DBA, pour assurer une compréhension mutuelle des besoins et contraintes techniques.
+- **Support technique** régulier pour analyser les erreurs, mettre en place des correctifs, et former les utilisateurs aux outils déployés.
+        `,
+      },
+      {
+        heading: "Résultats",
+        content: `
+- Réduction significative des incidents liés aux workflows (~50 %)
+- Gain de temps pour les équipes grâce à une supervision visuelle centralisée
+- Plus grande transparence dans les traitements, facilitant les audits internes
+        `,
+      },
+    ],
   },
 ];

@@ -1,0 +1,125 @@
+---
+// src/pages/blog/exemple-article.astro
+import Layout from "@/layouts/Layout.astro";
+import GlassHeader from "@/components/GlassHeader";
+import Footer from "@/components/Footer";
+---
+
+{/* Le titre de la page est directement défini ici */}
+<Layout title="How to Create a Font Subset with Transfonter">
+  <GlassHeader client:only="react" />
+
+  {/* Conteneur principal pour l'article.
+    - `max-w-3xl`: Définit la largeur maximale de contenu à 768px (standard pour Tailwind).
+                   Vous pouvez changer pour `max-w-4xl` (896px) si vous souhaitez un peu plus large.
+    - `mx-auto`: Centre ce bloc sur la page.
+    - `px-4 sm:px-6 lg:px-8`: Ajoute du padding horizontal réactif.
+    - `py-12`: Ajoute du padding vertical.
+  */}
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    {/* La balise <article> contient tout le contenu du post.
+      - `bg-white dark:bg-gray-800`: Fond blanc en mode clair, gris foncé en mode sombre.
+      - `rounded-lg shadow-md`: Coins arrondis et ombre légère pour un effet "carte".
+      - `p-6 md:p-8`: Padding intérieur.
+    */}
+    <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 md:p-8">
+      {/* Entête de l'article : titre, date, tags */}
+      <header class="mb-8 border-b pb-4 border-gray-200 dark:border-gray-700">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 leading-tight">
+          How to Create a Font Subset with Transfonter
+        </h1>
+        <p class="text-base text-gray-500 dark:text-gray-400 mb-4">
+          Publié le 10 Février 2025 • 3 min read
+        </p>
+        {/* Les tags sont affichés directement */}
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-200">
+            #fonts
+          </span>
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-200">
+            #optimization
+          </span>
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-200">
+            #web performance
+          </span>
+        </div>
+      </header>
+
+      {/* Corps de l'article.
+        - `prose prose-lg`: Classes de Tailwind Typography pour un style de texte agréable et lisible.
+                           `prose-lg` augmente légèrement la taille du texte.
+        - `dark:prose-invert`: Adapte les couleurs du texte pour le mode sombre.
+        - `max-w-none`: Permet au contenu 'prose' de prendre toute la largeur disponible 
+                       dans son parent (l'article), qui est déjà limité par `max-w-3xl` du `main`.
+      */}
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        
+        <section id="what-is-transfonter" class="scroll-mt-20">
+          <h2>What is Transfonter?</h2>
+          <p>Transfonter is a free online tool that helps convert and subset fonts. It supports various formats (TTF, OTF, WOFF, WOFF2) and allows users to optimize web fonts by reducing their size while maintaining essential glyphs.</p>
+          <p>For example, I encountered an issue when using the SF Pro Rounded font with the Satori library for generating OG images, as described in this post: Example OG Social Image. When using multiple font variants, the project...</p>
+        </section>
+
+        <section id="why-use-font-subsetting" class="scroll-mt-20">
+          <h2>Why Use Font Subsetting?</h2>
+          <p>Font files often contain thousands of glyphs, including symbols and characters for multiple languages. Subsetting removes unnecessary glyphs, reducing file size and improving website performance. This is particularly useful when only a specific language set or symbols are needed.</p>
+          
+          <section id="upload-the-font" class="scroll-mt-20">
+            <h3>Upload the Font</h3>
+            <p>Expliquez ici comment uploader la police sur Transfonter ou un outil similaire. Détaillez les étapes, par exemple : se rendre sur le site, trouver le champ d'upload, sélectionner le fichier de police (TTF, OTF, etc.).</p>
+          </section>
+          <section id="define-unicode-ranges" class="scroll-mt-20">
+            <h3>Define Unicode Ranges</h3>
+            <p>Si nécessaire, décrivez comment définir des plages Unicode spécifiques pour inclure uniquement certains caractères (par exemple, Latin de base, Latin étendu, symboles monétaires, etc.). Mentionnez l'utilité pour des langues spécifiques ou des ensembles de caractères limités.</p>
+          </section>
+          <section id="basic-subset" class="scroll-mt-20">
+            <h3>Basic Subset</h3>
+            <p>Détaillez les options de sous-ensemble de base, comme l'anglais, ou les caractères alphanumériques courants. Expliquez les avantages en termes de réduction de taille pour les cas d'usage les plus simples.</p>
+          </section>
+          <section id="extended-subset" class="scroll-mt-20">
+            <h3>Extended Subset</h3>
+            <p>Parlez des options pour des sous-ensembles plus étendus, incluant des caractères accentués, des ligatures, ou d'autres glyphes spécifiques qui pourraient être nécessaires tout en optimisant la taille du fichier.</p>
+          </section>
+        </section>
+
+        <section id="creating-a-font-subset" class="scroll-mt-20">
+          <h2>Creating a Font Subset with Transfonter</h2>
+          <p>Ici, vous pouvez regrouper les étapes pratiques pour créer le sous-ensemble. Peut-être un résumé des options à cocher ou des configurations à choisir dans l'outil Transfonter.</p>
+        </section>
+        
+        <section id="generate-the-font-files" class="scroll-mt-20">
+          <h2>Generate the Font Files</h2>
+          <p>Expliquez comment lancer la génération des fichiers de polices optimisés. Mentionnez les formats de sortie courants (WOFF2, WOFF) et leur importance pour la compatibilité et la performance web.</p>
+        </section>
+
+        <section id="implement-in-css" class="scroll-mt-20">
+          <h2>Implement in CSS</h2>
+          <p>Montrez un exemple de code CSS pour utiliser les polices générées via `@font-face`. Incluez des conseils sur `font-display` (par exemple, `swap`) pour une meilleure expérience utilisateur lors du chargement.</p>
+          <pre><code class="language-css">
+{`@font-face {
+  font-family: 'YourFontName';
+  src: url('/fonts/yourfontname.woff2') format('woff2'),
+       url('/fonts/yourfontname.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}`}
+          </code></pre>
+        </section>
+
+        <section id="test-the-fonts" class="scroll-mt-20">
+          <h2>Test the Fonts</h2>
+          <p>Donnez des conseils pour vérifier que les polices s'affichent correctement sur le site, que tous les caractères nécessaires sont présents, et que la performance est améliorée (par exemple, en utilisant les outils de développement du navigateur).</p>
+        </section>
+
+        <section id="conclusion" class="scroll-mt-20">
+          <h2>Conclusion</h2>
+          <p>Résumez les avantages du font subsetting et encouragez les lecteurs à utiliser cette technique pour optimiser leurs sites web. Vous pouvez ajouter un dernier conseil ou une ressource utile.</p>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <Footer client:only="react" />
+</Layout>

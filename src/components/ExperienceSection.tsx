@@ -62,6 +62,38 @@ export default function ExperienceSection() {
                     </motion.li>
                   ))}
                 </ul>
+
+                <motion.a
+                  href="/experience/bank-experience" // Remplacez job.detailPage par le chemin de votre page Markdown
+                  target="_self" // Ouvrir dans la même fenêtre
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link pt-8"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="mr-2 transition-transform duration-300 group-hover/link:translate-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    Clique ici pour en savoir plus&nbsp;
+                    <span role="img" aria-label="link">
+                      🔗
+                    </span>
+                  </span>
+                </motion.a>
               </motion.div>
             </TimelineItem>
           ))}
